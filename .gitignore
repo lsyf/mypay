@@ -1,0 +1,3 @@
+# Project exclude paths
+/account/account-app/target/
+/account/account-service/target/

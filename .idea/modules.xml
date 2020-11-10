@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/account/account.iml" filepath="$PROJECT_DIR$/account/account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/account/account-api/account-api.iml" filepath="$PROJECT_DIR$/account/account-api/account-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/account/account-app/account-app.iml" filepath="$PROJECT_DIR$/account/account-app/account-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/account/account-service/account-service.iml" filepath="$PROJECT_DIR$/account/account-service/account-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common-base/common-base.iml" filepath="$PROJECT_DIR$/common/common-base/common-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mypay.iml" filepath="$PROJECT_DIR$/.idea/mypay.iml" />
+    </modules>
+  </component>
+</project>

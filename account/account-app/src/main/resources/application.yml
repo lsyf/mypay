@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: account-app
+  profiles:
+    include: flyway
+  aop:
+    proxy-target-class: true
+  datasource:
+    url: jdbc:mysql://47.97.61.204:3306/my_account
+    username: root
+    password: root
+    druid:
+      # 配置初始化大小、最小、最大
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      #获取连接超时
+      max-wait: 60000
+      #检测连接
+      validation-query: select 1
+      validation-query-timeout: 1
+      test-while-idle: true  #申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis检测
+      test-on-borrow: false  #申请连接时执行validationQuery检测
+      test-on-return: false  #归还连接时执行validationQuery检测
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 30000 #连接保持空闲而不被驱逐的最小时间
+      max-evictable-idle-time-millis: 60000
+      async-close-connection-enable: false
+      # 缓存preparedStatement(PSCache),建议mysql关闭
+      pool-prepared-statements: false
+      filters: stat,wall
+      filter:
+        stat:
+          enabled: true
+        slf4j:
+          enabled: false
+      web-stat-filter:
+        enabled: false
+      stat-view-servlet:
+        enabled: true
+        reset-enable: true
+        url-pattern: /druid/*
+        login-username: root
+        login-password: root
+
+
+
+#swagger配置
+swagger:
+  enabled: true
+  base-package: com.mypay.account.app.controller
+  base-path: /**
+  title: 账务系统
+  exclude-path: /error, /ops/**
+  version: @version@
+
